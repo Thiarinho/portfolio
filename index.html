@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thierno Ismaila MANE | Portfolio IT</title>
+  <meta name="description" content="Portfolio professionnel de Thierno Ismaila MANE – Informaticien, Support IT, Réseaux, Cloud & DevOps junior.">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary:#0f172a;
+      --secondary:#2563eb;
+      --accent:#10b981;
+      --bg:#f5f7fa;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+    }
+
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family:'Poppins', sans-serif; background:var(--bg); color:var(--text); line-height:1.7; scroll-behavior: smooth; }
+
+    a { color:var(--secondary); text-decoration:none; }
+    .btn { display:inline-block; margin:5px; padding:12px 22px; background:var(--secondary); color:#fff; border-radius:25px; font-weight:500; transition:0.3s; }
+    .btn:hover { background:var(--accent); }
+
+    header { background: linear-gradient(135deg, var(--primary), #020617); color:#fff; padding:80px 20px; text-align:center; }
+    header h1 { font-size:42px; margin-bottom:10px; }
+    header h2 { font-size:20px; font-weight:400; margin-bottom:15px; }
+    header p { margin-bottom:10px; }
+    .photo { width:200px; height:200px; border-radius:50%; margin:20px auto; overflow:hidden; border:5px solid #fff; box-shadow:0 10px 30px rgba(0,0,0,.4); }
+    .photo img { width:100%; height:100%; object-fit:cover; }
+
+    section { padding:80px 20px; max-width:1000px; margin:auto; }
+    h3 { font-size:32px; margin-bottom:30px; color:var(--primary); border-bottom:4px solid var(--secondary); display:inline-block; padding-bottom:5px; }
+
+    .card { background:var(--card); padding:25px; border-radius:16px; margin-bottom:25px; box-shadow:0 15px 30px rgba(0,0,0,.08); transition: transform 0.3s; }
+    .card:hover { transform: translateY(-6px); }
+
+    .skills { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+    .skill { background:var(--secondary); color:#fff; padding:8px 18px; border-radius:20px; font-weight:500; transition:0.3s; }
+    .skill:hover { background:var(--accent); }
+
+    .projects { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:25px; }
+    .project h4 { margin-bottom:12px; color:var(--primary); }
+    .project p { font-size:14px; color:var(--muted); }
+    .project a { margin-top:8px; display:block; font-weight:500; }
+
+    footer { background:var(--primary); color:#fff; text-align:center; padding:40px 20px; font-size:14px; }
+
+    @media(max-width:768px){
+      .skills { flex-direction:column; align-items:center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="photo">
+    <img src="photo.jpg" alt="Photo de Thierno Ismaila Mane">
+  </div>
+  <h1>Thierno Ismaila MANE</h1>
+  <h2>Informaticien | Support IT | Technicien Réseaux & Systèmes</h2>
+  <p>📍 Rufisque, Sénégal · 📧 thiernomane932@gmail.com · 📞 +221 70 790 16 62</p>
+  <p><a href="https://www.linkedin.com/in/thierno-ismaïla-mane-b428a2245" target="_blank">LinkedIn professionnel</a></p>
+  <a href="cv.pdf" target="_blank" class="btn">👁️ Aperçu du CV</a>
+  <a href="cv.pdf" download class="btn">📄 Télécharger le CV</a>
+</header>
+
+<section id="about">
+  <h3>À propos de moi</h3>
+  <div class="card">
+    <p>Je suis Thierno Ismaila MANE, passionné par l'informatique et les technologies.  
+    Titulaire d’une double licence en Développement d’Applications et Réseaux Informatiques, je suis spécialisé en support IT, administration des systèmes et réseaux, et je m'intéresse aux solutions Cloud et DevOps.  
+    Disponible pour des missions, stages ou collaborations professionnelles.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <h3>Compétences</h3>
+  <div class="skills">
+    <span class="skill">Support IT</span>
+    <span class="skill">Réseaux & Systèmes</span>
+    <span class="skill">Cloud Computing</span>
+    <span class="skill">DevOps</span>
+    <span class="skill">Développement Web</span>
+    <span class="skill">Bases de données</span>
+    <span class="skill">Sécurité informatique</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h3>Projets & Réalisations</h3>
+  <div class="projects">
+    <div class="project card">
+      <h4>Portfolio Professionnel</h4>
+      <p>Site web personnel pour présenter mon profil, compétences et CV.</p>
+      <a href="https://github.com/TonNomUtilisateur/portfolio" target="_blank">Voir le code sur GitHub</a>
+    </div>
+    <div class="project card">
+      <h4>Application de Gestion</h4>
+      <p>Développement d’une application pour gérer les stocks et ventes d’une entreprise.</p>
+      <a href="#" target="_blank">Lien du projet</a>
+    </div>
+    <div class="project card">
+      <h4>Interconnexion VPN-MPLS</h4>
+      <p>Étude et mise en place d’une solution d’interconnexion de sites distants pour une grande entreprise.</p>
+      <a href="#" target="_blank">Lien du projet</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h3>Contact</h3>
+  <div class="card">
+    <p>Disponible pour toute opportunité professionnelle ou collaboration IT.</p>
+    <a class="btn" href="mailto:thiernomane932@gmail.com">📧 Me contacter par email</a>
+    <a class="btn" href="https://wa.me/221707901662" target="_blank">💬 WhatsApp direct</a>
+    <a class="btn" href="https://www.linkedin.com/in/thierno-ismaïla-mane-b428a2245" target="_blank">🔗 LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 – Thierno Ismaila MANE · Portfolio Professionnel</p>
+</footer>
+
+</body>
+</html>
+
