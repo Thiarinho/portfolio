@@ -1,419 +1,117 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thierno Ismaila MANE — Portfolio & CV</title>
-  <meta name="description" content="Portfolio professionnel de Thierno Ismaila MANE — Informaticien, Support IT, Réseaux, Cloud & DevOps">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thierno Ismaila MANE — Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  
-    :root{
-      --bg:#f6f7fb;
-      --card:#ffffff;
-      --primary:#0b1220;
-      --accent:#1e88e5;
-      --accent-2:#06b6d4;
-      --muted:#6b7280;
-      --success:#10b981;
-    }
-
-    *{box-sizing:border-box;cursor:default}
-    a,button,.btn,.card{cursor:pointer}
-    h2,h3,.section-title{cursor:default}
-    input,textarea{cursor:text}
-
-    /* Navigation menu */
-    nav{display:flex;gap:clamp(8px,2vw,16px);list-style:none;padding:0;margin:0;flex-wrap:wrap;justify-content:center}
-    nav a{color:#fff;text-decoration:none;font-size:clamp(12px,2vw,14px);padding:8px 12px;border-radius:6px;transition:all 0.3s ease;position:relative}
-    nav a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--accent-2);transition:width 0.3s ease}
-    nav a:hover{background:rgba(255,255,255,0.08)}
-    nav a:hover::after{width:100%}
-    html,body{height:100%}
-    body{font-family:'Poppins',sans-serif;margin:0;background:var(--bg);color:var(--primary);-webkit-font-smoothing:antialiased}
-
-    a{color:var(--accent)}
-    .container{max-width:1100px;margin:0 auto;padding:28px}
-
-    /* Header / Hero */
-    header.site-hero{
-      background:linear-gradient(135deg,#071027 0%, #0f172a 60%),
-                  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="tech" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23064e8a" opacity="0.3"/><line x1="0" y1="50" x2="100" y2="50" stroke="%231e88e5" stroke-width="0.5" opacity="0.1"/><line x1="50" y1="0" x2="50" y2="100" stroke="%231e88e5" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="1200" height="600" fill="%23071027"/><rect width="1200" height="600" fill="url(%23tech)"/></svg>'),
-                  linear-gradient(135deg,rgba(7,16,39,0.92),rgba(15,23,42,0.92));
-      background-size:cover,100px 100px,cover;
-      background-position:center,0 0,center;
-      background-attachment:fixed;
-      color:#fff;
-      padding:48px 20px;
-      border-bottom:6px solid rgba(255,255,255,0.04);
-      position:relative;
-      overflow:hidden
-    }
-    .hero-inner{display:grid;grid-template-columns:200px 1fr 240px;gap:20px;align-items:center;max-width:1100px;margin:0 auto;position:relative;z-index:1}
-    .profile-photo{width:200px;height:200px;border-radius:14px;overflow:hidden;border:4px solid rgba(255,255,255,0.12)}
-    .profile-photo img{width:100%;height:100%;object-fit:cover;display:block}
-    .hero-info h1{margin:0 0 6px;font-size:28px;letter-spacing:0.2px}
-    .hero-info p{margin:6px 0;color:rgba(255,255,255,0.85)}
-    .hero-actions{display:flex;flex-direction:column;gap:10px}
-    .btn{display:inline-block;padding:12px 18px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
-    .btn.secondary{background:rgba(255,255,255,0.09);color:#fff;border:1px solid rgba(255,255,255,0.06)}
-
-    /* Main layout */
-    main{padding:36px 20px}
-    .grid-2{display:grid;grid-template-columns:320px 1fr;gap:28px}
-
-    /* Left column */
-    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 8px 30px rgba(11,17,32,0.06);border:2px solid var(--accent);transition:all 0.3s ease}
-    .card:hover{box-shadow:0 12px 40px rgba(30,136,229,0.15);border-color:var(--accent-2)}
-    .meta-list{list-style:none;padding:0;margin:0}
-    .meta-list li{padding:8px 0;border-bottom:1px dashed rgba(30,136,229,0.2);color:var(--muted)}
-
-    /* Right column */
-    h2.section-title{margin:0 0 12px;font-size:20px;color:var(--primary)}
-    .timeline{display:flex;flex-direction:column;gap:14px}
-    .timeline-item{background:linear-gradient(180deg,#fff,#fbfdff);padding:14px;border-radius:10px;border-left:4px solid var(--accent);box-shadow:0 6px 18px rgba(11,17,32,0.04);color:var(--primary)}
-    :root[data-theme='dark'] .timeline-item{background:linear-gradient(180deg,rgba(64,181,246,0.05),rgba(77,208,225,0.02));color:#64b5f6}
-    .skills {display:flex;flex-wrap:wrap;gap:10px}
-    .tag{background:#eef7ff;color:var(--accent);padding:8px 12px;border-radius:999px;font-weight:600}
-
-    /* Entreprise photo */
-    .company-photo{display:block;width:100%;height:160px;border-radius:10px;object-fit:cover;border:1px solid #e6eef7}
-
-    /* Footer */
-    footer{padding:28px 20px;text-align:center;color:var(--muted)}
-
-    /* Print styles */
-    @media print{
-      header.site-hero, .btn, nav{display:none}
-      body{background:#fff}
-    }
-
-    /* Scroll progress bar */
-    .scroll-progress{position:fixed;left:0;top:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent-2));width:0;z-index:9999;box-shadow:0 2px 6px rgba(0,0,0,0.12);transition:width 0.15s linear}
-
-    /* Custom scrollbar (WebKit) */
-    ::-webkit-scrollbar{width:12px;height:12px}
-    ::-webkit-scrollbar-track{background:transparent}
-    ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--accent),var(--accent-2));border-radius:12px;border:3px solid rgba(0,0,0,0.06);transition:transform .18s ease, box-shadow .18s ease}
-    ::-webkit-scrollbar-thumb:hover{transform:scale(1.02);box-shadow:0 6px 18px rgba(6,182,212,0.12)}
-
-    /* Firefox scrollbar */
-    html{scrollbar-width:thin;scrollbar-color:var(--accent) transparent}
-
-    /* Dark theme variables */
-    :root[data-theme='dark']{
-      --bg:#071027;
-      --card:#0f172a;
-      --primary:#f0f4f8;
-      --accent:#64b5f6;
-      --accent-2:#4dd0e1;
-      --muted:#b0bec5;
-    }
-
-    /* Apply theme colors */
-    body{background:var(--bg);color:var(--primary);transition:background 0.25s ease, color 0.25s ease}
-    .card{background:var(--card);transition:background 0.25s ease, border-color 0.25s ease}
-    a{color:var(--accent);transition:color 0.25s ease}
-    p,li,span{color:var(--primary);transition:color 0.25s ease}
-    .muted{color:var(--muted)}
-
-    /* Responsive: Flexible margins & padding */
-    @media(max-width:1200px){
-      .container{padding:clamp(16px,5vw,28px)}
-      main{padding:clamp(20px,4vw,36px)}
-      header.site-hero{padding:clamp(32px,6vw,48px) 20px}
-      .grid-2{gap:clamp(16px,3vw,28px)}
-    }
-
-    @media(max-width:980px){
-      .hero-inner{grid-template-columns:140px 1fr;gap:clamp(12px,3vw,20px)}
-      .grid-2{grid-template-columns:1fr;gap:clamp(14px,2vw,20px)}
-    }
-
-    @media(max-width:768px){
-      .container{padding:clamp(12px,4vw,20px)}
-      main{padding:clamp(16px,3vw,24px)}
-      header.site-hero{padding:clamp(28px,5vw,40px) clamp(10px,3vw,20px)}
-      .hero-inner{grid-template-columns:1fr;gap:clamp(10px,3vw,16px)}
-      .profile-photo{width:clamp(140px,35vw,180px);height:clamp(140px,35vw,180px)}
-      .hero-actions{gap:clamp(8px,2vw,10px)}
-      .btn{padding:clamp(10px,2vw,12px) clamp(14px,4vw,18px);font-size:clamp(13px,2vw,14px)}
-    }
-
-    @media(max-width:480px){
-      .container{padding:clamp(10px,3vw,16px)}
-      body{font-size:14px}
-      header.site-hero{padding:clamp(24px,4vw,32px) clamp(8px,2vw,16px)}
-      .hero-info h1{font-size:clamp(20px,6vw,28px)}
-      .hero-info p{font-size:clamp(12px,2vw,14px)}
-      .card{padding:clamp(12px,3vw,20px);margin-bottom:clamp(12px,2vw,20px)}
-      h2.section-title{font-size:clamp(16px,4vw,20px)}
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
 
-<header class="site-hero">
-  <div class="hero-inner">
-    <div class="profile-photo">
-      <img src="photo.jpg" alt="Photo de Thierno Ismaila MANE">
+<div id="scrollProgress"></div>
+
+<header class="hero">
+  <div class="hero-content">
+    
+    <div class="profile">
+      <img src="photo.jpg" alt="Thierno MANE">
     </div>
 
-    <div class="hero-info">
+    <div class="hero-text">
       <h1>Thierno Ismaila MANE</h1>
-      <p>Informaticien polyvalent — Support IT • Réseaux & Systèmes • DevOps • Développement Web</p>
-      <p style="margin-top:12px;color:rgba(255,255,255,0.8)">Rufisque, Sénégal · <a href="mailto:thiernomane932@gmail.com" style="color:#fff;text-decoration:underline">thiernomane932@gmail.com</a> · +221 70 790 16 62</p>
-      <p style="margin-top:12px;color:rgba(255,255,255,0.8)">LinkedIn: <a href="https://www.linkedin.com/in/thierno-ismaïla-mane-b428a2245" target="_blank" style="color:#fff;text-decoration:underline">thierno-ismaïla-mane</a></p>
+      <p>Informaticien | DevOps | Réseaux | Support IT</p>
+      <p>📍 Rufisque, Sénégal</p>
     </div>
 
-    <div class="hero-actions">
-      <a class="btn" href="cv.pdf" target="_blank">📄 Voir le CV</a>
-      <a class="btn secondary" href="cv.pdf" download>⬇️ Télécharger le CV</a>
-      <a class="btn secondary" href="#contact">✉️ Me contacter</a>
-      <button id="themeToggle" class="btn secondary" title="Basculer thème" style="background:transparent;border:1px solid rgba(255,255,255,0.06)">🌓 Mode</button>
-      <button class="btn" onclick="window.print()" style="background:var(--accent-2);border:none;cursor:pointer">🖨️ Imprimer</button>
+    <div class="hero-buttons">
+      <!-- TELECHARGEMENT FORCE -->
+      <a href="./cv.pdf" download="CV_Thierno_Ismaila_MANE.pdf" class="btn primary">
+        ⬇ Télécharger CV
+      </a>
+
+      <button id="themeToggle" class="btn secondary">
+        🌙 Mode sombre
+      </button>
     </div>
+
   </div>
 </header>
 
 <main class="container">
-  <div class="grid-2">
-    <!-- Left column: contact, summary, services -->
-    <aside>
-      <div class="card">
-        <h2 class="section-title">À propos</h2>
-        <p>Étudiant en informatique et professionnel polyvalent, je conçois et déploie des solutions complètes réunissant développement, administration réseau, sécurité et automatisation. Je privilégie l'efficacité, la qualité et l'expérience utilisateur.</p>
-      </div>
 
-      <div class="card" style="margin-top:16px">
-        <h2 class="section-title">Contact & Infos</h2>
-        <ul class="meta-list">
-          <li><strong>Email :</strong> thiernomane932@gmail.com</li>
-          <li><strong>Téléphone :</strong> +221 70 790 16 62</li>
-          <li><strong>Localisation :</strong> Rufisque, Sénégal</li>
-          <li><strong>Disponibilité :</strong> Immédiate</li>
-        </ul>
-      </div>
+<section class="card">
+  <h2>Profil</h2>
+  <p>
+    Informaticien polyvalent spécialisé en développement, réseaux et DevOps.
+    Je conçois des solutions modernes, sécurisées et performantes.
+  </p>
+</section>
 
-      <div class="card" style="margin-top:16px">
-        <h2 class="section-title">Services</h2>
-        <ul class="meta-list">
-          <li>Développement web & applications</li>
-          <li>Création de CV interactifs & portfolios</li>
-          <li>Automatisation & intégrations (n8n, scripts)</li>
-          <li>Conseil réseaux & sécurité (VPN, MPLS)</li>
-          <li>Design graphique & supports</li>
-        </ul>
-      </div>
-    </aside>
-
-    <!-- Right column: CV details -->
-    <section>
-      <div class="card">
-        <h2 class="section-title">Profil professionnel</h2>
-        <p><strong>Informaticien | Support IT | Technicien Réseaux & Systèmes</strong></p>
-        <p style="color:var(--muted)">Polyvalent en développement, administration réseau et DevOps, je conçois des solutions complètes et fiables, de la conception UX à la mise en production, en mettant l'accent sur la sécurité et l'automatisation.</p>
-      </div>
-
-      <div class="card" style="margin-top:16px">
-        <h2 class="section-title">Compétences techniques</h2>
-        <div class="skills" style="margin-top:8px">
-          <span class="tag">HTML & CSS</span>
-          <span class="tag">Tailwinds/ React</span>
-          <span class="tag">Node.js / Python</span>
-          <span class="tag">Docker / CI-CD</span>
-          <span class="tag">MongoDB</span>
-          <span class="tag">AWS</span>
-          <span class="tag">Cloud</span>
-          <span class="tag">Jenkins</span>
-          <span class="tag">Prometeus / Grafana</span>
-          <span class="tag">Réseaux & Sécurité</span>
-          <span class="tag">Linux</span>
-          <span class="tag">MongoDB / SQL</span>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:16px">
-        <h2 class="section-title">Expériences & Projets</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <strong>Sonatel Academy</strong> — Application de gestion smartphone (conception, développement, déploiement). Automatisation CI/CD.
-          </div>
-          <div class="timeline-item">
-            <strong>Manetechnosolutions</strong> — Création de portfolios/CV interactifs, sites vitrines & e‑commerce, design graphique, mise en reseau d'une infrastructure local, Maintenance etc...
-          </div>
-          <div class="timeline-item">
-            <strong>Entrepre<style>neur IT / Support (2023–présent)</strong> — Maintenance, installation réseaux LAN, systèmes de vidéosurveillance et accompagnement PME.
-          </div>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:16px">
-        <h2 class="section-title">Formations & Certifications</h2>
-        <ul style="margin:0;padding-left:18px;color:var(--muted)">
-          <li>Licence Développement d'Applications — UNCHK (2021–2024)</li>
-          <li>Licence Réseaux & Systèmes — ISI (2021–2024) — Moy. 15,65/20</li>
-          <li>Cloud & DevOps — Orange Digital Center / Sonatel en 5 mois durant l'année (2024–2025)</li>
-          <li>Certifs : AWS re/Start, IT Essentials, CCNA, Introduction to Cybersecurity</li>
-        </ul>
-      </div>
-
-      <div class="card" style="margin-top:16px">
-        <h2 class="section-title">Langues & Centres d'intérêt</h2>
-        <p style="color:var(--muted)"><strong>Langues :</strong> Français (courant) • Anglais (intermédiaire)</p>
-        <p style="color:var(--muted)"><strong>Intérêts :</strong> Veille technologique, documentation technique, football</p>
-      </div>
-    </section>
+<section class="card">
+  <h2>Compétences</h2>
+  <div class="skills">
+    <span>HTML / CSS</span>
+    <span>React</span>
+    <span>Node.js</span>
+    <span>Docker</span>
+    <span>CI/CD</span>
+    <span>AWS</span>
+    <span>Linux</span>
+    <span>Réseaux & Sécurité</span>
   </div>
+</section>
 
-  <section id="projects" style="margin-top:26px">
-    <h2 class="section-title">Projets sélectionnés</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:12px">
-      <div class="card">
-        <strong>Portfolio Professionnel</strong>
-        <img src="portfolio.png" alt="portfolio">
-        <p style="color:var(--muted)">Site personnel présentant profil, compétences et CV interactif.</p>
-      </div>
-      <div class="card">
-        <strong>Application de Gestion</strong>
-        <img src="smartphone.png" alt="gestion smartphone">
-        <p style="color:var(--muted)">Système de gestion de stocks et ventes, intégration back-end et UI.</p>
-      </div>
-      <div class="card">
-        <strong>Interconnexion VPN-MPLS</strong>
-        <img src="mpls.png" alt="vpn-mpls">
-        <p style="color:var(--muted)">Étude et mise en œuvre d'une interconnexion sécurisée pour sites distants.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="entreprise" style="margin-top:clamp(24px,5vw,32px);text-align:center">
-    <h2 class="section-title">Entreprise</h2>
-    <div class="card">
-      <img src="photo1.jpg" alt="Photo de l'entreprise" class="company-photo" onerror="this.style.opacity=0.6;this.alt='Remplacez photo1.jpg par votre image'">
-    </div>
-  </section>
-
-  <section id="manetechnosolutions" style="margin-top:clamp(24px,5vw,32px)">
-    <h2 class="section-title" style="margin-bottom:clamp(16px,3vw,20px)">🏢 Manetechnosolutions</h2>
-    
-    <div class="card">
-      <h3 style="font-size:18px;color:var(--accent);margin-top:0">🎯 Objectif</h3>
-      <p>Fournir des solutions numériques complètes et sur mesure, adaptées aux besoins des particuliers, étudiants et entreprises. Nous nous concentrons sur la création digitale, l'innovation technologique et la qualité des services, en rendant les outils numériques accessibles et fonctionnels.</p>
+<section class="card">
+  <h2>Projets</h2>
+  <div class="projects">
+    <div class="project">
+      <img src="portfolio.png">
+      <p>Portfolio professionnel interactif</p>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(14px,2vw,20px);margin-top:clamp(16px,3vw,20px)">
-      <div class="card">
-        <h3 style="font-size:18px;color:var(--accent);margin-top:0">🌐 Développement Web</h3>
-        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:clamp(13px,2vw,14px)">
-          <li>Sites web vitrine et e-commerce</li>
-          <li>Applications web et mobile</li>
-          <li>Maintenance et dépannage de postes informatiques (hardware & software)</li>
-          <li>Installation et configuration de réseaux locaux (LAN)</li>
-          <li>Mise en place de solutions de vidéosurveillance</li>
-          <li>Accompagnement de clients (PME et particuliers) sur des solutions IT adaptées</li>
-          <li>formatation en informatique</li>
-          <li>Portfolios et CV interactifs</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 style="font-size:18px;color:var(--accent);margin-top:0">⚙️ Automatisation</h3>
-        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:clamp(13px,2vw,14px)">
-          <li>creation et configuration de ressources dans le cloud avec Terraform et Ansible</li>
-          <li>creation et configuration de  rese avec python</li>
-          <li>Optimisation processus</li>
-          <li>Intégrations systèmes</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 style="font-size:18px;color:var(--accent);margin-top:0">🎨 Design Graphique</h3>
-        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:clamp(13px,2vw,14px)">
-          <li>Flyers et affiches</li>
-          <li>Supports publicitaires</li>
-          <li>Contenus académiques</li>
-          <li>Branding & logos</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 style="font-size:18px;color:var(--accent);margin-top:0">🔒 Réseaux & Sécurité</h3>
-        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:clamp(13px,2vw,14px)">
-          <li>Interconnexion (VPN, MPLS)</li>
-          <li>Sécurisation systèmes</li>
-          <li>Bug bounty & audit</li>
-          <li>Protection données</li>
-        </ul>
-      </div>
+    <div class="project">
+      <img src="smartphone.png">
+      <p>Application de gestion</p>
     </div>
 
-    <div class="card" style="margin-top:clamp(16px,3vw,20px);background:linear-gradient(135deg,rgba(30,136,229,0.05),rgba(6,182,212,0.05))">
-      <h3 style="font-size:18px;color:var(--accent);margin-top:0">💎 Valeur Ajoutée</h3>
-      <ul style="margin:0;padding-left:18px;color:var(--muted)">
-        <li><strong>Expertise polyvalente :</strong> Développement, DevOps, réseaux et design</li>
-        <li><strong>Solutions complètes :</strong> Adaptées aux besoins spécifiques</li>
-        <li><strong>Qualité & Esthétique :</strong> Focus sur l'interactivité</li>
-        <li><strong>Approche moderne :</strong> Orientée résultats et performances</li>
-      </ul>
+    <div class="project">
+      <img src="mpls.png">
+      <p>Projet VPN-MPLS sécurisé</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact" style="margin-top:clamp(20px,4vw,26px)">
-    <div class="card">
-      <h2 class="section-title">Contact</h2>
-      <p>Disponible pour missions, collaborations et opportunités professionnelles.</p>
-      <p style="margin-top:12px"><a class="btn" href="mailto:thiernomane932@gmail.com">✉️ Envoyer un email</a> <a class="btn" href="https://wa.me/221707901662" target="_blank">💬 WhatsApp</a></p>
-    </div>
-  </section>
 </main>
 
 <footer>
-  © 2026 Thierno Ismaila MANE — Portfolio professionnel · <a href="#">Mentions légales</a>
-</footer>
+  © 2026 Thierno Ismaila MANE
 </footer>
 
 <script>
-  (function(){
-    const root = document.documentElement;
-    const progress = document.getElementById('scrollProgress');
-    const btn = document.getElementById('themeToggle');
+const toggle = document.getElementById("themeToggle");
+const root = document.documentElement;
 
-    // Initialize theme from localStorage or prefers-color-scheme
-    function applyTheme(t){
-      if(t === 'dark') root.setAttribute('data-theme','dark');
-      else root.removeAttribute('data-theme');
-      localStorage.setItem('theme', t);
-      if(btn) btn.textContent = (t==='dark') ? '🌙 Sombre' : '☀️ Clair';
-    }
+toggle.addEventListener("click", () => {
+  root.classList.toggle("dark");
 
-    const stored = localStorage.getItem('theme');
-    if(stored){ applyTheme(stored); }
-    else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){ applyTheme('dark'); }
-    else { applyTheme('light'); }
+  if(root.classList.contains("dark")){
+    toggle.textContent = "☀ Mode clair";
+  } else {
+    toggle.textContent = "🌙 Mode sombre";
+  }
+});
 
-    // Toggle handler
-    if(btn){
-      btn.addEventListener('click', ()=>{
-        const current = root.getAttribute('data-theme')==='dark' ? 'dark' : 'light';
-        applyTheme(current==='dark' ? 'light' : 'dark');
-      });
-    }
-
-    // Scroll progress update
-    function updateProgress(){
-      const h = document.documentElement.scrollHeight - window.innerHeight;
-      const scrolled = (h>0) ? (window.scrollY / h) * 100 : 0;
-      progress.style.width = scrolled + '%';
-    }
-    window.addEventListener('scroll', updateProgress, {passive:true});
-    window.addEventListener('resize', updateProgress);
-    updateProgress();
-  })();
+/* Scroll Progress */
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const height = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / height) * 100;
+  document.getElementById("scrollProgress").style.width = progress + "%";
+});
 </script>
 
 </body>
 </html>
-
